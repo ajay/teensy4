@@ -160,7 +160,7 @@ OBJS			:=	$(sort								\
 
 ################################################################################
 
-.PHONY: all help clean rebuild flash serial
+.PHONY: all help clean rebuild flash reset serial
 .SECONDARY: $(OBJS)
 
 all: $(ELF_FILE) $(HEX_FILE) $(BIN_FILE) $(DIS_FILE)
@@ -172,6 +172,9 @@ help:
 	@$(ECHO) '    board=<board>       - optional, default is $(board)'
 	@$(ECHO)
 	@$(ECHO) 'make flash              - flash hex file to teensy board'
+	@$(ECHO) '    board=<board>       - optional, default is $(board)'
+	@$(ECHO)
+	@$(ECHO) 'make reset              - reset teensy board'
 	@$(ECHO) '    board=<board>       - optional, default is $(board)'
 	@$(ECHO)
 	@$(ECHO) 'make serial             - start picocom to communicate with teensy'
@@ -227,6 +230,11 @@ $(ELF_FILE): $(OBJS) $(LINKER_FILE)
 
 flash: $(HEX_FILE)
 	$(Q) $(FLASHER) $(FLASHER_FLAGS) $<
+
+reset:
+	$(Q) $(FLASHER) $(FLASHER_FLAGS) -b
+
+
 
 serial:
 	$(PICOCOM) /dev/ttyACM0 $(PICOCOM_FLAGS)
