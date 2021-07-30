@@ -1,4 +1,6 @@
-# teensy4 setup
+# teensy4
+
+![CI Status](https://github.com/ajay/teensy4/actions/workflows/c-cpp.yml/badge.svg)
 
 ## Installation / Environment
 
