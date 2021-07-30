@@ -73,7 +73,7 @@ SECTIONS
 		FILL(0xFF)
 		. = ALIGN(1024);
 		KEEP(*(.csf))
-	} > FLASH
+	} > DTCM AT> FLASH
 
 	_stext = ADDR(.text.itcm);
 	_etext = ADDR(.text.itcm) + SIZEOF(.text.itcm) + SIZEOF(.ARM.exidx);
