@@ -47,7 +47,17 @@ SUB_TARGET_DIRS := $(realpath $(dir $(shell find -L . -mindepth 2 -maxdepth 2 -n
 
 ################################################################################
 
-.PHONY: all help clean rebuild run $(SUB_TARGET_DIRS)
+LINTER = clang-format
+
+LINT_EXTENSIONS = .c .cpp .h
+LINT_EXCLUDE_DIRS = extlib teensy_loader_cli
+LINT_EXCLUDE_DIRS_ := $(addprefix -not -path '*/,$(addsuffix /*',$(LINT_EXCLUDE_DIRS)))
+
+LINT_FILES := $(foreach ext, $(LINT_EXTENSIONS), $(shell find . -name '*$(ext)' $(LINT_EXCLUDE_DIRS_)))
+
+################################################################################
+
+.PHONY: all help clean rebuild run format format-check $(SUB_TARGET_DIRS)
 
 all: $(SUB_TARGET_DIRS)
 
@@ -61,6 +71,10 @@ help:
 	@$(ECHO) 'make rebuild            - recursively rebuild subdirs'
 	@$(ECHO)
 	@$(ECHO) 'make run                - recursively run subdirs'
+	@$(ECHO)
+	@$(ECHO) 'make lint               - lint source code'
+	@$(ECHO)
+	@$(ECHO) 'make lint-check         - check for lint issues'
 	@$(ECHO)
 	@$(ECHO) 'make help               - this info'
 	@$(ECHO)
@@ -76,3 +90,11 @@ clean: $(SUB_TARGET_DIRS)
 rebuild: all
 
 run: $(SUB_TARGET_DIRS)
+
+
+
+lint:
+	$(Q) echo $(LINT_FILES) | xargs $(LINTER) -i
+
+lint-check:
+	$(Q) echo $(LINT_FILES) | xargs $(LINTER) --dry-run --Werror

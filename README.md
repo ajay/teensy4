@@ -6,11 +6,12 @@
 
 #### Dependencies:
 - `arm-none-eabi-gcc`
+- `clang-format`
 - `libusb-dev`
 - `picocom`
 
 #### Installation
-- `sudo apt install gcc-arm-none-eabi libusb-dev picocom`
+- `sudo apt install gcc-arm-none-eabi clang-format libusb-dev picocom`
 
 - In order for serial comm to work properly:
     - Get udev rules from here: https://www.pjrc.com/teensy/00-teensy.rules
