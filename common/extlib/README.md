@@ -9,6 +9,13 @@
     - `teensy4/main.cpp` is deleted
     - all linker files have `DTCM AT>` added to `.text.csf` to resolve linker errors - see [here](https://forum.pjrc.com/threads/67252-Teensyduino-1-54-Beta-9?p=279524&viewfull=1#post279524)
 
+## fastled
+- repo - [github.com/FastLED/FastLED](https://github.com/FastLED/FastLED)
+- version: [3.4.0](https://github.com/FastLED/FastLED/releases/tag/3.4.0)
+- commit: [2fe6aeb](https://github.com/FastLED/FastLED/commit/2fe6aebc778a836a8556b8e4508381e9c847f7a3)
+- notes:
+    - contents of `src` taken and placed into `extlib/fastled`, all other files are ignored
+
 ## spi
 - repo - [github.com/PaulStoffregen/SPI](https://github.com/PaulStoffregen/SPI)
 - version: N/A
