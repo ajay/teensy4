@@ -79,9 +79,9 @@ DEFINES += -DUSB_SERIAL
 DEFINES += -DUSING_MAKEFILE
 
 # common MCU options
-CPUFLAGS  = -mcpu=cortex-m7 
-CPUFLAGS += -mfloat-abi=hard 
-CPUFLAGS += -mfpu=fpv5-d16 
+CPUFLAGS  = -mcpu=cortex-m7
+CPUFLAGS += -mfloat-abi=hard
+CPUFLAGS += -mfpu=fpv5-d16
 CPUFLAGS += -mthumb
 
 # common compiler options for C and C++
@@ -90,7 +90,7 @@ CPPFLAGS += $(DEFINES)
 CPPFLAGS += $(INCLUDE_DIRS)
 CPPFLAGS += -c					# compile and assemble, do not link
 CPPFLAGS += -fdata-sections
-CPPFLAGS += -ffunction-sections 
+CPPFLAGS += -ffunction-sections
 CPPFLAGS += -g
 CPPFLAGS += -MMD				# generate dependency file
 CPPFLAGS += -Ofast
