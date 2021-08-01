@@ -16,6 +16,14 @@
 - notes:
     - contents of `src` taken and placed into `extlib/fastled`, all other files are ignored
 
+## smartmatrix
+- repo - [github.com/pixelmatix/SmartMatrix](https://github.com/pixelmatix/SmartMatrix)
+- version: [4.0.3](https://github.com/pixelmatix/SmartMatrix/releases/tag/4.0.3)
+- commit: [1c6e53c](https://github.com/pixelmatix/SmartMatrix/commit/1c6e53c8b4317419b4b56ec49235e9ffb92581db)
+- notes:
+    - contents of `src` taken and placed into `extlib/smartmatrix`, all other files are ignored
+
+
 ## spi
 - repo - [github.com/PaulStoffregen/SPI](https://github.com/PaulStoffregen/SPI)
 - version: N/A
