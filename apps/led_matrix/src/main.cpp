@@ -12,7 +12,8 @@
 // constexpr size_t kColorDepth = 24;
 
 template<class T>
-class SweepValue final {
+class SweepValue final
+{
   public:
     SweepValue(T value = 0, T min = T(), T max = std::numeric_limits<T>::max(), T step = 1,
                bool increasing = true)
