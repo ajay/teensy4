@@ -96,6 +96,7 @@ CPPFLAGS += -MMD				# generate dependency file
 CPPFLAGS += -Ofast
 CPPFLAGS += -Wall
 CPPFLAGS += -Werror
+CPPFLAGS += -Wno-narrowing
 
 # compiler options for C only
 CFLAGS  = -std=gnu11
@@ -106,6 +107,7 @@ CXXFLAGS  = -std=gnu++17
 CXXFLAGS += -felide-constructors
 CXXFLAGS += -fno-exceptions
 CXXFLAGS += -fno-rtti
+CXXFLAGS += -Wno-register
 CXXFLAGS += -x c++
 
 LDFLAGS  = $(CPUFLAGS)
