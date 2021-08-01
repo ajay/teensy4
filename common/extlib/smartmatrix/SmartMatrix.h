@@ -37,7 +37,7 @@
 #define SM_VERSION 4000003
 #ifndef SM_INTERNAL
 #  ifdef SM_HAS_PRAGMA_MESSAGE
-#    pragma message "SmartMatrix Library version 4.000.003"
+// #    pragma message "SmartMatrix Library version 4.000.003"
 #  else
 #    warning SmartMatrix Library version 4.000.003  (Not really a warning, just telling you here.)
 #  endif

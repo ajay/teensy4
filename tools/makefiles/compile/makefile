@@ -107,7 +107,11 @@ CXXFLAGS  = -std=gnu++17
 CXXFLAGS += -felide-constructors
 CXXFLAGS += -fno-exceptions
 CXXFLAGS += -fno-rtti
+CXXFLAGS += -Wno-address-of-packed-member
 CXXFLAGS += -Wno-register
+CXXFLAGS += -Wno-stringop-truncation
+CXXFLAGS += -Wno-unused-local-typedefs
+CXXFLAGS += -Wno-unused-value
 CXXFLAGS += -x c++
 
 LDFLAGS  = $(CPUFLAGS)
@@ -145,6 +149,7 @@ baud ?= 115200
 
 PICOCOM_FLAGS  = --baud $(baud)
 PICOCOM_FLAGS += --echo
+PICOCOM_FLAGS += --imap lfcrlf
 PICOCOM_FLAGS += --omap crlf
 PICOCOM_FLAGS += --emap crlf
 

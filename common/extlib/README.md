@@ -22,7 +22,7 @@
 - commit: [1c6e53c](https://github.com/pixelmatix/SmartMatrix/commit/1c6e53c8b4317419b4b56ec49235e9ffb92581db)
 - notes:
     - contents of `src` taken and placed into `extlib/smartmatrix`, all other files are ignored
-
+    - commented out `#pragma message`s in `SmartMatrix.h` and `MatrixHardware_Teensy4_ShieldV5.h`
 
 ## spi
 - repo - [github.com/PaulStoffregen/SPI](https://github.com/PaulStoffregen/SPI)

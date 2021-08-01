@@ -57,7 +57,7 @@ LINT_FILES := $(foreach ext, $(LINT_EXTENSIONS), $(shell find . -name '*$(ext)' 
 
 ################################################################################
 
-.PHONY: all help clean rebuild run format format-check $(SUB_TARGET_DIRS)
+.PHONY: all help clean rebuild run lint lint-check $(SUB_TARGET_DIRS)
 
 all: $(SUB_TARGET_DIRS)
 
